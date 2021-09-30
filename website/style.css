@@ -1,0 +1,229 @@
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background: #f23557;
+    width: 100vw;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.navbar__menu {
+    background-color: rgba(0, 13, 60, 0.5);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    transition: top 0.5s;
+}
+
+#app * {
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+}
+
+#app {
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    grid-auto-columns: 100%;
+    grid-auto-rows: minmax(150px, auto);
+    height: 100vh;
+    width: 100vw;
+    scroll-behavior: smooth;
+    width: max-content;
+    word-wrap: break-word;
+    background: #f23557;
+    color: #f0d43a;
+    justify-content: center;
+    grid-gap: 1em;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+@media only screen and (max-width: 35em) {
+    html {
+        overflow-x: hidden;
+    }
+    body, #app, #app * {
+        width: 100%;
+    }
+    .headline, .title {
+        text-align: center;
+    }
+    #generate {
+        height: 70px;
+    }
+}
+
+.holder {
+    display: grid;
+    background-color: rgba(55, 55, 55, .1);
+}
+
+.entry {
+    background: rgba(59, 74, 107, .4);
+    clear: both;
+    max-width: 700px;
+    word-wrap: break-word;
+    width: 400px;
+    height: fit-content;
+    align-items: unset;
+    align-self: unset;
+    padding: 1px;
+    margin: 1px;
+    align-content: unset;
+}
+
+#entryHolder {
+    margin-top: 1em;
+    border-top: 3px white solid;
+    display: table;
+    tab-size: 2cm;
+}
+
+#temp, #content, #date {
+    display: table-row-group;
+    text-align: end;
+    tab-size: 2em;
+    table-layout: auto;
+}
+
+.cell {
+    display: table-cell;
+    height: 10px;
+    padding: 5px;
+    align-content: unset;
+    margin: 1px;
+}
+
+.cell:nth-child(odd) {
+    color: #f0d43a;
+    text-align: left;
+    width: 25%;
+}
+
+.cell:nth-child(even) {
+    color: cornsilk;
+    text-align: right;
+    width: 65%;
+}
+
+.headline {
+    font-size: xx-large;
+    color: #fffff8;
+}
+
+.title {
+    display: table-header-group;
+    color: greenyellow;
+}
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+
+label {
+    display: block;
+    font-size: 27px;
+}
+
+input {
+    display: block;
+    height: 60px;
+    width: 320px;
+    background: #22b2da;
+    color: #f0d43a;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+}
+
+button {
+    width: 400px;
+    height: 100px;
+    background: #3b4a6b;
+    color: #f0d43a;
+    font-size: 26px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 2px 4px 5px #444;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+textarea {
+    background: #22b2da;
+    color: #f0d43a;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Reset style for HTML element on active to have no border*/
+
+input:focus, select:focus, textarea:focus, button:focus {
+    outline: none;
+}
+
+/* Style for Placeholder Text*/
+
+::placeholder {
+    /* Firefox, Chrome, Opera */
+    color: #f0d43a;
+    font-family: 'Oswald', sans-serif;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #f0d43a;
+    font-family: 'Oswald', sans-serif;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #f0d43a;
+    font-family: 'Oswald', sans-serif;
+}
+
+.navbar__menu ul {
+    padding-left: 0;
+    margin: 0;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.navbar__menu ul li {
+    color: white;
+    margin: 5px;
+    padding: 10px;
+}
+
+.navbar__menu {
+    background-color: rgba(0, 13, 60, 0.5);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    transition: top 0.5s;
+}
+
+.navbar__menu li {
+    display: block;
+}
+
+/* Header Styles */
+
+.page__header {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
