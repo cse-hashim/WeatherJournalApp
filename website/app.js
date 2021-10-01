@@ -4,8 +4,8 @@
 /**
  * date object
  */
-const d = new Date();
-/**
+ let day = new Date();
+ /**
  * debug purpose counter
  */
 let counter = 0;
@@ -14,7 +14,7 @@ let counter = 0;
  * 
  * @returns the current date
  */
-const newDate = () => d.getMonth() + '.' + d.getDate() + '.' + d.getFullYear();
+const newDate = () => (day.getMonth() + 1) + '/'+ day.getDate()+'/'+ day.getFullYear();
 
 /**
  * @type {HTMLElement}
@@ -55,7 +55,7 @@ const entryHolder_temp = document.querySelector('#entryHolder #temp');
 const entryHolder_content = document.querySelector('#entryHolder #content');
 
 // Personal API Key for OpenWeatherMap API
-const apiKey = '73b5b77d027e9ae927052c696060eb4a';
+const apiKey = '73b5b77d027e9ae927052c696060eb4a&units=metric';
 
 /**
  * 
@@ -89,7 +89,7 @@ const updateUI = async (entry) => {
     entryHolder_temp.innerHTML='';
     entryHolder_date.innerHTML='';
     entryHolder_content.innerHTML='';
-    entryHolder_temp.appendChild(createTableRaw('TEMP:', `${entry['temperature']}`));
+    entryHolder_temp.appendChild(createTableRaw('TEMP:', `${entry['temperature']} \u2103`));
     entryHolder_date.appendChild(createTableRaw('DATE:', `${entry['date']}`));
     entryHolder_content.appendChild(createTableRaw('CONTENT:', `${entry['user-response']}`));
     zip.value = '';
